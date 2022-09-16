@@ -21,23 +21,26 @@ class Ad extends Model
     }
 
     public function getLinkByValues($values) {
-        DB::table('ads')
-            ->select('link',)
+        return DB::table('ads')
             ->join('ad_value', 'ads.id', '=', 'ad_value.ad_id')
             ->join('values', 'ad_value.value_id', '=', 'values.id')
             ->join('tags', 'values.tag_id', '=', 'tags.id')
             ->where([
-                ['tags.name', 'like', $values["firstCondition"]["tag"]],
-                ['value', 'like', $values["firstCondition"]["value"]]
+                ['tags.name', '=', $values["firstCondition"]["tag"]],
+                ['values.value', '=', $values["firstCondition"]["value"]],
+                ['ads.location', '=', $values["fourthCondition"]["location"]]
             ])
             ->orWhere([
-                ['tags.name', 'like', $values["secondCondition"]["tag"]],
-                ['value', 'like', $values["secondCondition"]["value"]]
+                ['tags.name', '=', $values["secondCondition"]["tag"]],
+                ['values.value', '=', $values["secondCondition"]["value"]],
+                ['ads.location', '=', $values["fourthCondition"]["location"]]
             ])
             ->orWhere([
-                ['tags.name', 'like', $values["thirdCondition"]["tag"]],
-                ['value', 'like', $values["thirdCondition"]["value"]]
+                ['tags.name', '=', $values["thirdCondition"]["tag"]],
+                ['values.value', '=', $values["thirdCondition"]["value"]],
+                ['ads.location', '=', $values["fourthCondition"]["location"]]
             ])
+            ->select('link')
             ->get();
     }
 }
