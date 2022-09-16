@@ -41,6 +41,7 @@ class Ad extends Model
                 ['ads.location', '=', $values["fourthCondition"]["location"]]
             ])
             ->select('link')
+            ->inRandomOrder()
             ->get();
     }
 }
