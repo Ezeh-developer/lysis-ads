@@ -1,0 +1,53 @@
+{
+	"firstAd": {
+		"firstCondition": {
+			"tag": "sport",
+			"value": "football"
+		},
+		"secondCondition": {
+			"tag": "league",
+			"value": "laliga santander"
+		},
+		"thirdCondition": {
+			"tag": "isLive",
+			"value": "false"
+		},
+		"fourthCondition": {
+			"location": "aside"
+		}
+	},
+	"secondAd": {
+		"firstCondition": {
+			"tag": "sport",
+			"value": "football"	
+		},
+		"secondCondition": {
+			"tag": "league",
+			"value": "laliga santander"
+		},
+		"thirdCondition": {
+			"tag": "isLive",
+			"value": "false"
+		},
+		"fourthCondition": {
+			"location": "main"
+		}
+	},
+	"thirdAd": {
+		"firstCondition": {
+			"tag": "sport",
+			"value": "football"	
+		},
+		"secondCondition": {
+			"tag": "league",
+			"value": "laliga santander"
+		},
+		"thirdCondition": {
+			"tag": "isLive",
+			"value": "false"
+		},
+		"fourthCondition": {
+			"location": "main"
+		}
+	}
+}
