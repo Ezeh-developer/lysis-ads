@@ -35,9 +35,9 @@ class AdController extends Controller
         $ad = new Ad;
 
         return [
-            'firstLink' => $ad->getLinkByValues($request->input('firstAd')),
-            'secondLink' => $ad->getLinkByValues($request->input('secondAd')),
-            'thirdLink' => $ad->getLinkByValues($request->input('thirdAd'))
+            'firstAd' => $ad->getLinkByValues($request->input('firstAd'))->first(),
+            'secontAd' => $ad->getLinkByValues($request->input('secondAd'))->first(),
+            'thirtAd' => $ad->getLinkByValues($request->input('thirdAd'))->first()
         ];
     }
 }
