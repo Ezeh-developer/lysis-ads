@@ -2,18 +2,22 @@
 
 namespace App\Models;
 
+use App\Models\Value;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+
 
 class Ad extends Model
 {
     use HasFactory; 
 
     protected $fillable = [
+        'image',
+        'views_hired',
+        'location',
         'link',
-        'clicks_hired',
-        'location'
+        'current_views'
     ];
 
     public function values() {
