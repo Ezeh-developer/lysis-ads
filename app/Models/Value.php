@@ -10,7 +10,7 @@ use App\Models\Ads\Ad;
 
 class Value extends Model
 {
-    use HasFactory;
+    use HasFactory,SoftDeletes;
 
     protected $fillable = [
         'value',
