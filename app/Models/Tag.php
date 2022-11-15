@@ -9,7 +9,7 @@ use App\Models\Ads\Value;
 
 class Tag extends Model
 {
-    use HasFactory;
+    use HasFactory,SoftDeletes;
 
     protected $fillable = [
         'name'
