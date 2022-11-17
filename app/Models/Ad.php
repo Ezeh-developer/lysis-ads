@@ -4,16 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Ads\Value;
 use Illuminate\Support\Facades\DB;
 
 class Ad extends Model
 {
-    use HasFactory; 
+    use HasFactory,SoftDeletes; 
 
     protected $fillable = [
+        'image',
+        'views_hired',
+        'location',
         'link',
-        'clicks_hired',
-        'location'
+        'current_views'
     ];
 
     public function values() {
